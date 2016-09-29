@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>YunT帮助文档</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Help文档">
+	<meta name="keywords" content="云计算，云托管，云App，云OS">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+<style>
+body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+</style>
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+	-->
+	
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="../index.html">YUNT</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+
+              <li class="">
+                <a href="getting-started.html">帮助首页</a>
+              </li>
+              <li class="">
+                <a href="usage.html">使用介绍</a>
+              </li>
+              <li class="">
+                <a href="examples.html">常见业务</a>
+              </li>
+              <li class="">
+                <a href="advanced.html">高级说明</a>
+              </li>
+			  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>什么是YunT</h1>
+    <p class="lead">介绍、入门和高级说明</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+			<li><a href="#whatisit"><i class="icon-chevron-right"></i>YunT是什么</a></li>
+			<li><a href="#whatcanitdo"><i class="icon-chevron-right"></i>YunT能做什么</a></li>
+			<li><a href="#example"><i class="icon-chevron-right"></i>YunT使用案例</a></li>
+			<li><a href="#faq"><i class="icon-chevron-right"></i>常见问题</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- What
+        ================================================== -->
+        <section id="whatisit">
+          <div class="page-header">
+            <h1>1. YunT</h1>
+          </div>
+          <p class="lead">YunT（云梯）是帮助个人和中小用户低价部署云端业务，简化运维和实现弹性扩展的PasS平台。</p>
+
+		
+		<h3>1、功能 </h3>
+		<p>YunT用成熟运营商服务器搭建计算集群，用高可用技术搭建存储集群，用存储计算分离的模式支撑用户上传部署的云端应用，支撑常规的WEB应用、移动APP的后台应用和其它云端应用等。</p>
+
+		<h3>2、可靠</h3>
+		<p>YunT只做管控，云端应用依然运行在服务器提供商上。YunT计算集群采用虚拟集群管理方式，后台服务器有成熟的阿里云、百度云和腾讯云服务器，也有海外服务器（满足某些海外网络访问的需求）。在YunT 平台上，这些服务器被组织成虚拟机房，用户的云端应用在集群的统一调度下一般拥有多个副本运行在不同服务器上，单点故障不会影响用户业务系统的健康运行。</p>
+		
+		<h3>3、应用</h3>
+		<p>YunT上运行的是一个个应用。应用可以是一个程序，一个Web网站，也可以是个Helloword。应用有2个来源，一个是用户自己开发的应用上传到YunT（比如自己开发的爬虫应用）；另一个是从“应用中心”选择常用的应用（比如Nginx Web应用实现网站部署）。在YunT 上用户关心的是业务应用，而不是传统的服务器资源或网络资源，从而简化自己的业务的开发。</p>
+		<p>如果您是一般用户，YunT上的“应用中心”一般会有常用的按照功能分类的应用以及相关的配置说明。直接部署即可实现一些常规的需求（比如建设一个个人网站、论坛、博客）。应用中心将会不断丰富，各种新奇好玩的应用将进一步满足更多的需求。</p>
+    	<p>如果您是开发者，YunT上的应用可以由任何语言编写的，在编写好应用后您只需要把应用和相关依赖包压缩、上传、部署即可运行起来，YunT会为其配置IP、端口、存储空间，从而使应用可以被外界访问。如果该应用要对公网服务（比如Web网站应用），您可以通过YunT的“服务部署”来分配公网IP和端口，在全球任何地方任何时间随时随地访问您的应用。</p>
+		
+        <h3>4、服务</h3>
+		<p>服务是对应用流量的封装，应用为了实现高可用和负载均衡一般一个应用会有多个副本运行在全球各地。来自公网（需要被任何用户访问的）和内网（为了安全起见只需要自己的业务系统访问的）访问服务的网络流量会按照策略（目前是轮转）转发到这些副本应用上，从而实现负载均衡和可用性。比如应用Nginx部署了服务，系统会为该服务分配公网IP，访问Nginx服务公网IP的流量会被转发到后台所有nginx 的应用上。</p>
+		
+
+       	 <!-- whatcanitdo
+        ================================================== -->
+        <section id="whatcanitdo">
+          <div class="page-header">
+            <h1>YunT能做什么</h1>
+			<p class="lead">YunT为用户的应用提供云端运行环境，它是一个PasS平台，用户只需关心应用本身，计算、网络、存储资源和运维细节由YunT管理。</p>
+		  </div>
+			<h3>网站</h3>
+            	<p>YunT 后台依然运行在业内安全可靠的服务器提供商之上。但是它更进一步为用户提供了应用的管理平台，用户建设网站只需要在管理平台上点几下鼠标，上传网站页面即可部署自己的网站。</p>
+            <h3>移动应用后端</h3>
+	            <p>对于移动应用开发者，后台的弹性扩展和分地域的部署是一个很大的需求，YunT 的副本机制能很好满足这类需求。在YunT平台上点击鼠标即可配置应用在高峰期的运行副本数量，在高峰期过后再通过鼠标设置成常规数量。管控端会动态弹性的根据机房的负载在<strong>数秒中内</strong>启动／停止应用的副本，从而满足移动应用的用户体验。</p>
+            <h3>其它云应用</h3>
+	            <p>由于YunT的计算服务器均是业内主要服务器提供商，所以YunT上运行的应用并没有限制。开发者可以开发任何自己有价值的创新应用上传运行。另外，YunT 的计算资源价格更低廉，能减少创业者和个人用户的前期投入和开发成本。</p>
+          
+        </section>
+		
+        <!-- example
+        ================================================== -->
+        <section id="example">
+          <div class="page-header">
+            <h1>YunT使用案例</h1>
+          </div>
+          <p class="lead">部署一个基于Nginx 的网站</p>
+          	<h3>Step1</h3>
+            <h3>Step2</h3>
+            <h3>Step3</h3>
+        </section>
+
+		<!-- FAQ
+        ================================================== -->
+        <section id="faq">
+          <div class="page-header">
+            <h1>FAQ</h1>
+			<p class="lead"> 大家常问的问题。</p>
+		  </div>
+			<h3>Q1</h3>
+            <h3>Q2</h3>
+          
+        </section>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>GridOS Team email： GridOSTeam at 163.com </p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+    <script type="text/javascript">
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+
+  </body>
+</html>
