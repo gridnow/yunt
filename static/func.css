@@ -734,8 +734,8 @@ margin-left: 20%;
 /*.paetner-tableBox td img{ max-width:50%; }*/
 .paetner-tableBox table{ max-width:1200Px;}
 
-.logo-link {display:inline-block;background-image:url(../../images/logo.png); width:133px; height:20px; cursor:pointer; padding-bottom:30px;  background-repeat:no-repeat;}
-.masthead-brand a:hover{display:inline-block;background-image:url(../../images/logo-hover.png); width:133px; height:20px; cursor:pointer; padding-bottom:30px; padding-top:15px;  background-repeat:no-repeat;}
+.logo-link {display:inline-block;background-image:url(../images/logo.png); width:133px; height:20px; cursor:pointer; padding-bottom:30px;  background-repeat:no-repeat;}
+.masthead-brand a:hover{display:inline-block;background-image:url(../images/logo-hover.png); width:133px; height:20px; cursor:pointer; padding-bottom:30px; padding-top:15px;  background-repeat:no-repeat;}
 
 
 .margin-center{ margin:auto}
