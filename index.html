@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="云梯，提供设备联网与管理、远程查看控制，以服务为中心的Pass平台">
     <meta name="author" content="">
@@ -18,1553 +18,858 @@
     <!--script src="../../assets/js/ie-emulation-modes-warning.js"></script-->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script language="javascript" src="./static/common.js">
-	</script>
-   <script language="javascript">
-     
-	 
-	 
-	 function onBodyResize()
-	 {
-	 
-	var width  = 2560;
-	var height = 769;//alert("222222");
-	  screenWidth  = document.body.clientWidth;
-	  screenHeight = document.body.clientHeight;
-	var rate = document.body.clientWidth/width;
-	var offset = screenHeight - height*rate;
-	document.body.style.backgroundPosition = "0px "+offset+"px";
-	 
-	 
-	 
-	  if(screenWidth>=1200)
-      {
-        for(var i=0;i<peoples.length;i++)
-	    {
-	     peoples[i].className = "col-lg-2dot4" ;  //style.width="20%";
-	    }
-	 
-     }else
-	 {
-	     for(var i=0;i<peoples.length;i++)
-	     {
-	       peoples[i].className = "col-sm-4";  //style.width="20%";
-	     }
-	 }
-	 
-	 
-	 }
-	 
-	 function onBodyLoad()
-	 {
-	 	
-	 	/*var div = document.getElementById("fourPic");
-var top = div.offsetTop;alert(top);
-var parent = div.parentNode;alert("****");
-while(parent!=null&&parent!=document.body){
-  top += (parent.offsetTop!=null)?parent.offsetTop:0;
-    alert(parent.offsetTop);
-  parent = parent.parentNode;
-}*/
-	 	///alert(top);
-	 	
-	 /*	fourPicOffsetTop = document.getElementById("fourPic").offsetTop;
-	 	alert(fourPicOffsetTop);*/
-	 	
-	 	//alert(document.getElementById("fourPic").parentNode.parentNode.scrollTop);
-	 	
-	 	
-	 	 ///alert(fourPicOffsetTop);
-	 }
-   </script>
-   
-   <style>
-   
-  /* .fixed_div {
-   position:absolute;
-   z-index:1;
-   bottom:0px;
-   left:0px;
-   width:100%;
-   height:100%;
-   border:1px solid red;
-   background:#e5e5e5;
-}*/
-   
-   </style>
-   
-  </head>
- 
-  <body onload="onBodyLoad()" onresize="onBodyResize()" style="background-image: url(&quot;images/back.png&quot;); background-attachment: fixed; background-color: rgb(51, 52, 61); background-size: 100%; background-position: 0px 388.018px; background-repeat: no-repeat;">
-  <script language="javascript">
-  // background-attachment:fixed;
-    var width  = 2560;
-	var height = 769;//alert("222222");
-	var screenWidth  = document.body.clientWidth;
-	var screenHeight = document.body.clientHeight;
-	var rate = document.body.clientWidth/width;
-	var offset = screenHeight - height*rate;
-	document.body.style.backgroundPosition = "0px "+offset+"px";
-	if(screenWidth<960)
-	{
-	   document.body.style.backgroundImage ="none";
-	}
-	///alert( screenWidth+" ** "+height*rate+" ** "+offset);
-   
-  
-  </script>
-  
-    <div class="site-wrapper pc">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div id="masthead" class="masthead clearfix" style="height: 64px; z-index: 999;">
-            <div class="inner menu" id="logo" style="padding-bottom:30px; padding-top:12px;">
-              <h3 class="masthead-brand">
-              <a class="logo-link">
-              </a>
-              </h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li><a href="https://www.xxx.cn/" onmouseover="onMenuOver(this)" id="print" style="color:#FFFFFF">平台介绍</a></li>
-                  <li style="position:relative">
-                    <a onmouseover="onMenuOver(this)" id="service">
-                      功能服务
-                    </a>
-                    
-                       <div id="seviceList" class="seviceList" style="width:580px; position:absolute; top:60px; left:-260px; display:none">
-                        <div style="width:100%; height:40px; cursor:pointer;" onmousemove="onULover(1)" onmouseout="onULout(event)">
-                         <ul style=" list-style:none" onmousemove="onULover(1)">
-                          <li style="float:left; margin-right:20px;"><a href="https://www.xxx.cn/unify.php">云端服务一体化开发引擎</a>
-                          </li><li class="smallAngleLi" onmousemove="onULover(1)" id="smallAngleLi" style="background-image: url(&quot;images/smallangle2.png&quot;);">
-                          <!--div  style="position:absolute; top:-16px; left:60px;width:20px; height:8px;"></div-->
-                          <a href="https://www.xxx.cn/service.php">IoT功能组件及方案超市</a>
-                          </li><li style="float:left;"> <a href="https://www.xxx.cn/engine.php">大数据分析引擎</a>
-                          </li>
-                         </ul>
-                         </div>
-                       </div>
-                  </li>
-                  <li><a href="https://www.xxx.cn/partner.php" onmouseover="onMenuOver(this)">合作伙伴</a></li>
-                  <li style="display:none">
-                  
-                  <a href="https://www.xxx.cn/sdk.php" id="sdkLink" onmouseover="onMenuOver(this)" style="position:relative">
-                  资料库
-                  </a>
-                  
-                  <div id="sdkList" class="seviceList" style="width:580px; position:absolute; top:60px; left:-80px; display:none">
-                        <div style="width:100%; height:40px; cursor:pointer;" onmousemove="onULover(2)" onmouseout="onULout(event)">
-                         <ul style=" list-style:none" onmousemove="onULover(2)">
-                          <li style="float: left; padding-right: 40px; width: 80px; background-image: url(&quot;images/smallangle2.png&quot;);" class="smallAngleLi2" id="smallAngleLi2"><a href="https://www.xxx.cn/sdk.php">skd</a>
-                          </li><li style="float:left; margin-right:20px;"><a href="https://www.xxx.cn/doc.php">文档</a>
-                          </li>
-                         </ul>
-                         </div>
-                       </div>
-                  </li>
-                  <li class="consoleBtn"><a href="https://www.xxx.cn/login.php" class="circleAngle" style=" padding:9px 27px; border: 1px #666666 solid;  color:#666666; cursor:pointer">控制台</a></li>
-                </ul>
-              </nav>
-            </div>
-             <div id="menueListLine" style="width:100%; display:none; height:40px; margin-top:20px; border-top:1px #33343d solid;">
-              </div>
-          </div>
-          
-            
-          <div class="inner cover">
-             <div id="firstPic" style="width: 480px; min-height: 210px; height: auto; margin: auto; opacity: 1;">
-             <div style="width:480px; height:125px;">
-                <img src="./static/bigLogo.png" style="max-width:80%; height:auto">
-             </div>
-            
-                 
-             </div>
-      
-           
-          </div>
-          
-           
-      </div>
-      
-      
-        </div>
-   
-      
-      
-    </div>
-    
-    <!--div style="position:relative; width:100px; height:100px; z-index:100"-->
-      
-   
-    
-    
-    
-    
-    <script language="javascript">
-	
-	  function showOrHideMobileMenu(n)
-	  {
-	     
-	      var obj = document.getElementById("seviceList2");
-	      if(n==0)
-		  {
-		     obj.style.display = "none";
-		  }else if(n==1)
-		  {
-		     if(obj.style.display == "none")
-			 {
-			    obj.style.display = "";
-			 }else
-			 {
-			    obj.style.display = "none";
-			 }
-		  }
-	  }
-    
     </script>
-    
-    
-    
-    <div class="site-wrapper moblie" style="height:auto">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div id="masthead" class="masthead clearfix pc" style="height:64px; z-index:999">
-            <div class="inner menu" id="logo" style="padding-bottom:30px; padding-top:15px;">
-              <h3 class="masthead-brand">
-              <a class="logo-link">
-              </a>
-              </h3>
-              <nav>
-                <ul class="nav masthead-nav" style="width:100%; min-width:200px;">
-                  <li><a href="https://www.xxx.cn/" onmouseover="showOrHideMobileMenu(0)" id="print" style="color:#FFFFFF">平台介绍</a></li>
-                  <li style="position:relative; margin-left:20px;">
-                    <a onmouseover="showOrHideMobileMenu(1)" onclick="showOrHideMobileMenu(1)" id="service2">
-                      功能服务
-                    </a>
-                       <div id="seviceList2" class="seviceList" style="width:410px; display:none; position:absolute; top:60px; left:-200px;">
-                        <div style="width:100%; height:40px; cursor:pointer;" onmousemove="onULover2(1)" onmouseout="onULout(event)">
-                         <ul style=" list-style:none" onmousemove="onULover2(1)">
-                          <li style="float:left; margin-right:20px;"><a href="https://www.xxx.cn/unify.php">云端服务一体化开发引擎</a>
-                          </li><li class="smallAngleLi" style="background-image:none" onmousemove="onULover(1)" id="smallAngleLi">
-                          <a href="https://www.xxx.cn/service.php">IoT功能组件</a>
-                          </li><li style="float:left;"> <a href="https://www.xxx.cn/engine.php">大数据分析引擎</a>
-                          </li>
-                         </ul>
-                         </div>
-                       </div>
-                  </li>
-                  <li style="margin-left:20px;"><a href="https://www.xxx.cn/partner.php" onmouseover="showOrHideMobileMenu(0)">合作伙伴</a></li>
-                  <li style="display:none; margin-left:20px;">
-                  <a href="https://www.xxx.cn/sdk.php" id="sdkLink" onmouseover="onMenuOver(this)" style="position:relative">
-                  资料库
-                  </a>
-                  <div id="sdkList" class="seviceList" style="width:100%; position:absolute; top:60px; left:-80px; display:none">
-                        <div style="width:100%; height:40px; cursor:pointer;" onmousemove="onULover(2)" onmouseout="onULout(event)">
-                         <ul style=" list-style:none" onmousemove="onULover(2)">
-                          <li style="float:left; padding-right:40px; width:80px;" class="smallAngleLi2" id="smallAngleLi2"><a href="https://www.xxx.cn/sdk.php">skd</a>
-                          </li><li style="float:left; margin-right:20px;"><a href="https://www.xxx.cn/doc.php">文档</a>
-                          </li>
-                         </ul>
-                         </div>
-                       </div>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-             <div id="menueListLine" style="width:100%; display:none; height:40px; margin-top:20px; border-top:1px #33343d solid;">
-              </div>
-          </div>
-            
-          <div class="inner cover" style=" margin-top:150px; margin-bottom:50px;">
-             <div style=" width:100%; height:auto;  margin:auto;">
-             <div style="width:100%; height:auto">
-                <img src="./static/bigLogo.png" class="img-responsive" style="margin:auto; width:300px; max-width:478px;">
-             </div>
-             <!--div style="width:100%; margin-top:0px; font-size:28px;text-align:center; word-spacing:15px; letter-spacing:5px; color:#FFFFFF">
-              开启硬件云端智慧
-             </div-->
-             <div class="Apply-moblie">
-                <a class="circleAngle" href="https://www.xxx.cn/apply.php">
-                  申请试用
-                </a>
-             </div>
-             </div>
-          </div>
-      </div>
-        </div>
-    </div>
-        
-    
-    <div class="site-wrapper pc" id="firstBlock" style="height: 475px; margin-top: -101.5px;">
-      <div class="site-wrapper-inner">
-        <div class="cover-container" id="secondPic" style="opacity: -0.296296;">
-          <div class="inner cover">
-            <div style="width:673px; height:auto; margin:auto; position:relative">
-              <div style="width:475px; height:475px; margin:auto; left:0px; right:0px; top:-100px;  position:absolute">
-                 <img src="./static/boll.png" class="img-responsive">
-              </div>
-            <!--div style="width:100%; height:80px;">
-            </div-->
-             <div style="width:480px; height:auto; color:#00bfac; font-size:36px; margin:auto;">
-                重新定义云计算
-             </div>
-             <div style="width:509px; font-size:36px;text-align:center; word-spacing:15px; margin:auto; padding-top:5px; letter-spacing:3px; color:#FFFFFF">
-              平台即服务
-             </div>
-             <div style="width:100%; height:15px;">
-             </div>
-             <div class="introduce" style="width:530px; color:#a9aaac; font-style:italic; height:auto; font-family:&#39;Microsoft YaHei UI&#39;;  letter-spacing:1px;  margin:auto; font-size:19px; line-height:30px; text">
-             YunT（云梯）是帮助个人和中小企业用户降低云端资源成本、简化运维复杂度和实现秒级弹性扩展的PasS平台。
-             </div>
-             </div>
-           
-           
-          </div>
+    <script language="javascript">
 
-    
-          
-          
-          
 
-        </div>
 
-      </div>
+        function onBodyResize()
+        {
 
-    </div>
-    
-    
-    <div class="container moblie" style="height:auto; margin-bottom:40px; margin-top:105px;">
-      
-       <div style="width:100%; height:auto; margin:auto;">
-             <p style="height:auto; color:#00bfac; font-size:26px; margin:auto;">
-                国内首家
-             </p>
-             <p style="font-size:26px;text-align:center; word-spacing:15px; margin:auto; padding-top:5px; letter-spacing:0px; color:#FFFFFF">
-              智能硬件PaaS平台
-             </p>
-             <p style="width:100%; height:15px;">
-             </p>
-             <p class="introduce" style="color:#a9aaac; font-style:italic; height:auto; font-family:&#39;Microsoft YaHei UI&#39;; padding-left:5px; padding-right:5px;  letter-spacing:1px;  margin:auto; font-size:18px; line-height:30px; text">
-               YunTi面向IoT硬件厂商，提供设备联网与管理、远程查看控制、定制化云端功能开发、海量硬件数据存储与分析等基础设施，加速硬件实现联网智能化。
-             </p>
-       </div>
-    
-    </div>
-  
-  
-   <div class="site-wrapper secondBlock" id="secondBlock" style=" height:auto;">
-      <div class="site-wrapper-inner">
+            var width  = 2560;
+            var height = 769;//alert("222222");
+            screenWidth  = document.body.clientWidth;
+            screenHeight = document.body.clientHeight;
+            var rate = document.body.clientWidth/width;
+            var offset = screenHeight - height*rate;
+            document.body.style.backgroundPosition = "0px "+offset+"px";
+
+
+
+            if(screenWidth>=1200)
+            {
+                for(var i=0;i<peoples.length;i++)
+                {
+                    peoples[i].className = "col-lg-2dot4" ;  //style.width="20%";
+                }
+
+            }else
+            {
+                for(var i=0;i<peoples.length;i++)
+                {
+                    peoples[i].className = "col-sm-4";  //style.width="20%";
+                }
+            }
+
+
+        }
+
+        function onBodyLoad()
+        {
+
+            /*var div = document.getElementById("fourPic");
+             var top = div.offsetTop;alert(top);
+             var parent = div.parentNode;alert("****");
+             while(parent!=null&&parent!=document.body){
+             top += (parent.offsetTop!=null)?parent.offsetTop:0;
+             alert(parent.offsetTop);
+             parent = parent.parentNode;
+             }*/
+            ///alert(top);
+
+            /*	fourPicOffsetTop = document.getElementById("fourPic").offsetTop;
+             alert(fourPicOffsetTop);*/
+
+            //alert(document.getElementById("fourPic").parentNode.parentNode.scrollTop);
+
+
+            ///alert(fourPicOffsetTop);
+        }
+    </script>
+
+    <style>
+
+        /* .fixed_div {
+         position:absolute;
+         z-index:1;
+         bottom:0px;
+         left:0px;
+         width:100%;
+         height:100%;
+         border:1px solid red;
+         background:#e5e5e5;
+      }*/
+
+    </style>
+
+</head>
+
+<body onload="onBodyLoad()" onresize="onBodyResize()" style="background-image: url(&quot;images/back.png&quot;); background-attachment: fixed; background-color: rgb(51, 52, 61); background-size: 100%; background-position: 0px 388.018px; background-repeat: no-repeat;">
+<script language="javascript">
+    // background-attachment:fixed;
+    var width  = 2560;
+    var height = 769;//alert("222222");
+    var screenWidth  = document.body.clientWidth;
+    var screenHeight = document.body.clientHeight;
+    var rate = document.body.clientWidth/width;
+    var offset = screenHeight - height*rate;
+    document.body.style.backgroundPosition = "0px "+offset+"px";
+    if(screenWidth<960)
+    {
+        document.body.style.backgroundImage ="none";
+    }
+    ///alert( screenWidth+" ** "+height*rate+" ** "+offset);
+
+
+</script>
+
+<div class="site-wrapper pc">
+
+    <div class="site-wrapper-inner">
+
         <div class="cover-container">
 
-         
+            <div id="masthead" class="masthead clearfix" style="height: 64px; z-index: 999;">
+                <div class="inner menu" id="logo" style="padding-bottom:30px; padding-top:12px;">
+                    <h3 class="masthead-brand">
+                        <a class="logo-link">
+                        </a>
+                    </h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li><a href="https://www.xxx.cn/" onmouseover="onMenuOver(this)" id="print" style="color:#FFFFFF">平台介绍</a></li>
+                            <li><a href="https://www.xxx.cn/help/index.html" onmouseover="onMenuOver(this)">功能说明</a></li>
+                            <li><a href="https://www.xxx.cn/partner.php" onmouseover="onMenuOver(this)">合作伙伴</a></li>
 
-          <div class="inner cover">
-             <div style="width:100%; height:auto; margin:auto;">
-                 <div class="container" id="thirdPic" style="opacity: -3.8375; padding-left: 15px; padding-right: 15px;">
-                   <img class="img-responsive index-infoPic" src="./static/infos.png" style="margin:auto; min-width:300px;">
-                 </div>
-             </div>
-          </div>
-          <div class="mastfoot">
-            <div class="inner">
+                            <li class="consoleBtn"><a href="https://www.xxx.cn/login.php" class="circleAngle" style=" padding:9px 27px; border: 1px #666666 solid;  color:#666666; cursor:pointer">YunT后台</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="menueListLine" style="width:100%; display:none; height:40px; margin-top:20px; border-top:1px #33343d solid;">
+                </div>
             </div>
-          </div>
+
+
+            <div class="inner cover">
+                <div id="firstPic" style="width: 480px; min-height: 210px; height: auto; margin: auto; opacity: 1;">
+                    <div style="width:480px; height:125px;">
+                        <img src="./static/bigLogo.png" style="max-width:80%; text-align:center;height:auto">
+                    </div>
+                </div>
+
+
+            </div>
+
 
         </div>
 
-      </div>
 
     </div>
-  
-  
-  
-  
-   <div class="site-wrapper" style="height:auto">
-      <div class="site-wrapper-inner">
-        <div class="cover-container" id="fourPic" style="opacity: -3.99167; margin-bottom: 211.5px;">
-          <div class="inner cover">
-             <div style="width:100%; height:380px; margin:auto;">
-                <div class="functionDetail" style="height:150px; margin:auto">
-                   <div class="row" style="padding-left:0px; padding-right:0px;padding-left:0px; padding-right:0px;">
-
-                 <div class="col-md-4" style="padding-left:0px; padding-right:0px;">
-                  <div class="detail left">
-                    <div class="index-blockIcon" style=" margin-left:auto; margin-right:auto;background-image:url(images/cloud.png); width:88px; height:88px;">
-                       </div>
-                       <div style=" font-size:20px;">
-                          云端服务一体化开发引擎
-                       </div>
-                       <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
-                         业内独创一体化开发引擎架构，自动解决底层连接、存储、分布式集群部署、弹性扩容、安全等难题，降低IoT云端功能开发门槛，普通工程师即可快速完成云端服务开发部署，加速IoT功能创新迭代。
-                       </div>
-                       
-                       <div class="detailBtn" style="width:100%; height:60px;">
-                         <a class="circleAngle" href="https://www.xxx.cn/unify.php">
-                           了解更多
-                        </a>
-             
-                      </div>
-                       
-                   </div>
-                 </div>
-                 
-                 <div class="col-md-4" style="padding-left:0px; padding-right:0px;">
-                     <div class="detail" style=" margin-left:auto; margin-right:auto">
-                     <div class="index-blockIcon" style="margin-left:auto; margin-right:auto; background-image:url(images/function.png); width:88px; height:88px;">
-                       </div>
-                       <div style=" font-size:20px;">
-                          IoT功能组件及方案超市
-                       </div>
-                        <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
-                         提供丰富的IoT功能组件及方案，包括账号体系、设备绑定管理、事件通知引擎、OTA管理、定时任务引擎、设备分享、微信接入等，开发者可直接使用，无需“重复造轮子”，可以专注于核心业务研发。
-                       </div>
-                       
-                       <div class="detailBtn" style="width:100%; height:60px;">
-                         <a class="circleAngle" href="https://www.xxx.cn/service.php">
-                           了解更多
-                        </a>
-             
-                      </div>
-                       
-                       </div>
-                       
-                       
-                 </div>
-                 <div class="col-md-4 " style="padding-left:0px; padding-right:0px;">
-                   <div class="detail" style=" float:right">
-                   <div class="index-blockIcon" style="margin-left:auto; margin-right:auto; background-image:url(images/data.png); width:88px; height:88px;">
-                       </div>
-                       <div style=" font-size:20px;">
-                          大数据分析引擎
-                       </div>
-                       <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
-                         自动针对用户和设备使用行为进行分析，包含多种通用的分析指标，支持快速定制化分析，开发者无需搭建大数据分析平台，即可及时看懂数据，以指导产品功能改进、营销策略实施、增值服务运营。
-                          
-                       </div>
-                       <div class="detailBtn" style="width:100%; height:60px;">
-                         <a class="circleAngle" href="https://www.xxx.cn/engine.php">
-                           了解更多
-                        </a>
-             
-                      </div>
-                       
-                       
-                       
-                      </div> 
-                 </div>
-                 </div>
-                
-                </div> 
-                
-                
-             </div>
-          </div>
-          <div class="mastfoot">
-            <div class="inner">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  
-      
-    
-<!--div class="container site-wrapper" style=" width:100%; margin:auto;height:auto; padding-bottom:100px; background-color:#f8f8f8">
-<div class="index-bigtitle">
-成你之快，我之追求
-</div>
-<div class="row index-block-row" style=" margin:auto;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div class="index-detail-icon" style="background-image:url(images/1.1.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          开发简单
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         创新PaaS架构极大降低研发难度
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.2.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          专注业务
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         无需搭建和管理底层基础服务
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.3.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          渠道接入
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持对接微信、京东等多家物联平台
-                       </div>
-                       
-                      
-                       
-                   </div>
-
 
 
 
 </div>
 
-</div>
+<!--div style="position:relative; width:100px; height:100px; z-index:100"-->
 
 
-
-
-<div class="row" style="margin-top:50px;margin:auto;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div class="index-detail-icon"  style=" background-image:url(images/1.4.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          自动运维
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         业务服务7*24自动化运维管理
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.5.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          规模支持
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持千万量级设备并发接入和P级数据存储
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.6.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          安全保障
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         具备设备、网络、云端、数据等多重安全防护
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-</div>
-
-
-
-<div class="row index-detail-icon"   style="margin-top:50px;margin:auto;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div  class="index-detail-icon" style="background-image:url(images/1.7.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          节约成本
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         节约时间成本和资金投入
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.8.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          数据指导
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         大数据指导产品优化和增值服务挖掘
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.9.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          迭代创新
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         业务可快速迭代完善并创新
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-</div>
-
-
-
-</div-->
-    
- <div class="container site-wrapper index-container2" style=" width:100%; margin:auto;height:auto;background-color:#f8f8f8">
-<div class="index-bigtitle">
-成你之快，我之追求
-</div>
-<div class="row" style=" margin-left:auto; margin-right:auto; margin-top:60px;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div class="index-detail-icon" style="background-image:url(images/1.1.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          开发简单
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         创新PaaS架构极大降低研发难度
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon" style="background-image:url(images/1.2.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          专注业务
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         无需搭建和管理底层基础服务
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4 pc" style="padding-left:0px; padding-right:0px;">
-
-              <!--div class="detail big-right pc" style="float:right">
-                    <div class="index-detail-icon"  style="background-image:url(images/1.3.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          渠道接入
-                       </div>
-                       <div class="detail"  style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持对接微信、京东等多家物联平台
-                       </div>
-                   </div-->
-
-                <div class="detail big-right" style="float:right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.3.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          渠道接入
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持对接微信、京东等多家物联平台
-                       </div>
-                   </div>
-
-</div>
-<div class="col-xs-12 col-sm-4 moblie" style="padding-left:0px; padding-right:0px;">
-                <div class="detail big-right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.3.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          渠道接入
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持对接微信、京东等多家物联平台
-                       </div>
-                   </div>
-
-</div>
-
-
-</div>
-
-
-
-
-<div class="row index-second-block" style="margin-left:auto; margin-right:auto;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div class="index-detail-icon" style=" background-image:url(images/1.4.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          自动运维
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         业务服务7*24自动化运维管理
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon" style="background-image:url(images/1.5.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          规模支持
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         支持千万量级设备并发接入和P级数据存储
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4 pc" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right" style="float:right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.6.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          安全保障
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         具备设备、网络、云端、数据等多重安全防护
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-<div class="col-xs-12 col-sm-4 moblie" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.6.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          安全保障
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         具备设备、网络、云端、数据等多重安全防护
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-</div>
-
-
-
-<div class="row  index-second-block" style="margin-left:auto; margin-right:auto;padding-left:0px; padding-right:0px;">
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-<div class="detail">
-                    <div class="index-detail-icon" style="background-image:url(images/1.7.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          节约成本
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         节约时间成本和资金投入
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
-
-
-<div class="detail margin-center">
-                    <div class="index-detail-icon" style="background-image:url(images/1.8.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          数据指导
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         大数据指导产品优化和增值服务挖掘
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-</div>
-<div class="clearfix visible-xs"></div>
-<div class="col-xs-12 col-sm-4 pc" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right" style="float:right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.9.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          迭代创新
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         业务可快速迭代完善并创新
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-
-<div class="col-xs-12 col-sm-4 moblie" style="padding-left:0px; padding-right:0px;">
-
-              <div class="detail big-right">
-                    <div class="index-detail-icon" style="background-image:url(images/1.9.png);">
-                       </div>
-                       <div style=" font-size:20px; color:#000000">
-                          迭代创新
-                       </div>
-                       <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
-                         业务可快速迭代完善并创新
-                       </div>
-                       
-                      
-                       
-                   </div>
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-    
-    
-       
-    
-
-
-
-
-
-<div class="container site-wrapper index-block3" style=" width:100%; margin:auto;height:auto;  background-color:#ffffff">
-
-
-
-<div class="index-bigtitle">
-云计算梦之队保航护驾
-</div>
-<div class="row" style="margin-top:60px; margin-left:auto; margin-right:auto;padding-left:0px; padding-right:0px; width:100%">
-<div class="col-lg-2dot4" style="padding-left:0px; padding-right:0px;" name="peopleBox">
-  <img class="img-responsive" src="./static/zd.png" onmouseover="onPeopleOver(1)" style="cursor:pointer">
-  <div id="zdzdzd" class="peopleBox" style="display:none" onmouseout="onPeopleOut(1)">
-    <div class="inner cover" onmouseover="onPeopleOver(1)" style="cursor:pointer">
-            <h1 style="font-size:28px; margin-top:30px;" class="cover-heading">孙志东</h1>
-            <h5 style="font-size:14px"> 联合创始人</h5>
-             <div class="peple-line">
-            </div>
-            <p class="lead descript">前百度基础架构部架构师、阿里巴巴核心系统部架构师，分布式系统设计和大数据存储领域技术专家。</p>
-          
-          </div>
-
-</div>
-  
-</div>
-<div class="col-lg-2dot4" style="padding-left:0px; padding-right:0px;" name="peopleBox">
-<img class="img-responsive" src="./static/swx.png" onmouseover="onPeopleOver(2)" style="cursor:pointer">
-
-<div id="wxwxwx" class="peopleBox" style="display:none" onmouseout="onPeopleOut(2)">
-    <div class="inner cover" onmouseover="onPeopleOver(2)" style="cursor:pointer">
-            <h1 class="cover-heading" style=" font-size:28px;margin-top:30px;">孙文现</h1>
-            <h5 style=" font-size:14px;">联合创始人</h5>
-            <div class="peple-line">
-            </div>
-            <p class="lead descript">前百度高级产品运营经理，曾带领过超过50人的团队，具有丰富的商业产品研发、拓展和运营经验。</p>
-       
-          </div>
-
-</div>
-
-
-</div>
-<div class="clearfix visible-xs "></div>
-<div class="col-lg-2dot4" style="padding-left:0px; padding-right:0px;" name="peopleBox">
-<img class="img-responsive" src="./static/lhl.png" onmouseover="onPeopleOver(3)" style="cursor:pointer">
-<div id="hlhlhl" class="peopleBox" style="display:none" onmouseout="onPeopleOut(3)">
-    <div class="inner cover" onmouseover="onPeopleOver(3)" style="cursor:pointer">
-            <h1 class="cover-heading" style=" font-size:28px;margin-top:30px;">李海磊</h1>
-            <h5 style=" font-size:14px;">创始人</h5>
-             <div class="peple-line">
-            </div>
-            <p class="lead descript">前百度大数据平台架构师、微软Bing架构师、小米开放云平台负责人，在智能硬件云平台和大数据方面有丰富经验。</p>
-           
-          </div>
-
-</div>
-
-
-</div>
-<div name="peopleBox" class="col-lg-2dot4" style="padding-left:0px; padding-right:0px;">
-<img class="img-responsive" src="./static/lc.png" onmouseover="onPeopleOver(4)" style="cursor:pointer">
-<div id="lclclc" class="peopleBox" style="display:none" onmouseout="onPeopleOut(4)">
-    <div class="inner cover" onmouseover="onPeopleOver(4)" style="cursor:pointer">
-            <h1 class="cover-heading" style="font-size:28px;margin-top:30px;">崔潇扬</h1>
-            <h5 style="font-size:14px;">联合创始人</h5>
-             <div class="peple-line">
-            </div>
-            <p class="lead  descript">此前任职于大唐移动通信设备有限公司，国内最早开始4G无线通信研究的成员之一，拥有发明专利5件。</p>
-           
-          </div>
-
-</div>
-
-</div>
-<div class="col-lg-2dot4" name="peopleBox" style="padding-left:0px; padding-right:0px;">
-<img class="img-responsive" src="./static/cp.png" onmouseover="onPeopleOver(5)" style="cursor:pointer">
-<div id="cpcpcp" class="peopleBox" style="display:none" onmouseout="onPeopleOut(5)">
-    <div class="inner cover" onmouseover="onPeopleOver(5)" style="cursor:pointer">
-            <h1 style="font-size:28px;margin-top:30px;" class="cover-heading">陈鹏</h1>
-            <h5 style=" font-size:14px;"> 联合创始人</h5>
-             <div class="peple-line">
-            </div>
-            <p class="lead  descript">前百度基础架构部架构师，在分布式系统、大数据分析及hadoop、hbase等开源系统方面经验丰富。</p>
-          </div>
-
-</div>
-
-</div>
 
 
 
 
 <script language="javascript">
 
-  document.getElementById("smallAngleLi").style.backgroundImage="url(images/smallangle2.png)";// = "";//先隐藏
-  function onPeopleOver(n)
-  {
-     ///
-	 document.getElementById("zdzdzd").style.display = "none";
-	 document.getElementById("wxwxwx").style.display = "none";
-	 document.getElementById("hlhlhl").style.display = "none";
-	 document.getElementById("lclclc").style.display = "none";
-	 document.getElementById("cpcpcp").style.display = "none";
-	 switch(n)
-	 {
-	   case 1:document.getElementById("zdzdzd").style.display = "";break;
-	   case 2:document.getElementById("wxwxwx").style.display = "";break;
-	   case 3:document.getElementById("hlhlhl").style.display = "";break;
-	   case 4:document.getElementById("lclclc").style.display = "";break;
-	   case 5:document.getElementById("cpcpcp").style.display = "";break;
-	 }
-  }
-  
-  function onPeopleOut(n)
-  {
-     document.getElementById("zdzdzd").style.display = "none";
-	 document.getElementById("wxwxwx").style.display = "none";
-	 document.getElementById("hlhlhl").style.display = "none";
-	 document.getElementById("lclclc").style.display = "none";
-	 document.getElementById("cpcpcp").style.display = "none";
-      switch(n)
-	 {
-	   case 1:document.getElementById("zdzdzd").style.display = "none";break;
-	   case 2:document.getElementById("wxwxwx").style.display = "none";break;
-	   case 3:document.getElementById("hlhlhl").style.display = "none";break;
-	   case 4:document.getElementById("lclclc").style.display = "none";break;
-	   case 5:document.getElementById("cpcpcp").style.display = "none";break;
-	 }
-  }
-  
-  
-  var peoples = document.getElementsByName("peopleBox");
-  
-  
-  
-  if(screenWidth>=1200)
-      {
-	  
-	   
-        for(var i=0;i<peoples.length;i++)
-	    {
-	    //  peoples[i].className = " col-xs-12 col-sm-4 col-lg-pull-2dot4";  //style.width="20%";
-	    }
-	 
-     }else
-	 {
-	     // alert(" **** ");
-	      document.getElementById("thirdPic").style.opacity = 1;
-	     for(var i=0;i<peoples.length;i++)
-	     {
-	       peoples[i].className = "col-xs-12 col-sm-4";  //style.width="20%";
-	     }
-	 }
-  
-  
-  
-  var firstDis = 0;//第二块与第一块之间的距离
-  
-  
-  
-  var bottomBlank  = (screenHeight/2 - 100); //下边空隙的高度
-  firstDis = (200 - bottomBlank);
-  document.getElementById("firstBlock").style.marginTop = firstDis+"px";
-  
-  
-  
-  
-  
-  //firstBlock 
-  
-  
-  
-  
-  
-  //if()
-  
-  
-  
-  
- /// alert(peoples.length);
-  
-  
+    function showOrHideMobileMenu(n)
+    {
+
+        var obj = document.getElementById("seviceList2");
+        if(n==0)
+        {
+            obj.style.display = "none";
+        }else if(n==1)
+        {
+            if(obj.style.display == "none")
+            {
+                obj.style.display = "";
+            }else
+            {
+                obj.style.display = "none";
+            }
+        }
+    }
+
 </script>
 
 
-<div class="col-xs-12 col-lg-1">
 
 
 
+<div class="site-wrapper moblie" style="height:auto">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-</div>
+            <div class="inner cover" style=" margin-top:150px; margin-bottom:50px;">
+                <div  style=" width:100%; height:auto;  margin:auto;">
+                    <div style="width:100%; height:auto">
+                        <img src="static/bigLogo.png" class="img-responsive" style="margin:auto; width:300px; max-width:478px;">
+                    </div>
 
-
-
-
-</div> 
-
-
-<div class="container index-block5" style="color:#000000;  padding-top:50px;">
-        
-         我们热诚期待与更多优秀的人一同前行
-         
-           <div class="joinBtn container" style="width:100%; height:60px; margin-top:40px;">
-                         <a class="circleAngle" href="https://www.xxx.cn/jobs.php">
-                           加入我们
-                        </a>
-             
-                      </div>
+                </div>
+            </div>
         </div>
-
+    </div>
 </div>
-    
-    
-    
-    
-    
-    
-   <div class="container" style="font-size:24px; width:100%; color:#000000; background-color:#00b1a0;">
-        
-         
-           <div class="container index-block4">
-            <p class="kouhao1">我们致力于
-            </p>
-             <p class="kouhao2">打造IoT基础设施，加速世界IoT化！
-            </p>
+
+<div class="site-wrapper pc" id="firstBlock" style="height: 475px; margin-top: -101.5px;">
+    <div class="site-wrapper-inner">
+        <div class="cover-container" id="secondPic" style="opacity: -0.296296;">
+            <div class="inner cover">
+                <div style="width:673px; height:auto; margin:auto; position:relative">
+                    <div style="width:475px; height:475px; margin:auto; left:0px; right:0px; top:-100px;  position:absolute">
+                        <img src="./static/boll.png" class="img-responsive">
+                    </div>
+                    <!--div style="width:100%; height:80px;">
+                    </div-->
+                    <div style="width:480px; height:auto; color:#00bfac; font-size:36px; margin:auto;">
+                        重新定义云计算
+                    </div>
+                    <div style="width:509px; font-size:36px;text-align:center; word-spacing:15px; margin:auto; padding-top:5px; letter-spacing:3px; color:#FFFFFF">
+                        平台即服务
+                    </div>
+                    <div style="width:100%; height:15px;">
+                    </div>
+                    <div class="introduce" style="width:530px; color:#a9aaac; font-style:italic; height:auto; font-family:&#39;Microsoft YaHei UI&#39;;  letter-spacing:1px;  margin:auto; font-size:19px; line-height:30px; text">
+                        YunT（云梯）是帮助个人和中小企业用户降低云端资源成本、简化运维复杂度和实现秒级弹性扩展的PasS平台。
+                    </div>
+                </div>
+
             </div>
         </div>
 
+    </div>
 
-    
-  
-   
-   
-   <div class="site-wrapper" style="background-color:#24242e; height:320px">
-      <div class="site-wrapper-inner">
-        <div class="cover-container" style="font-size:24px; color:#f0f0f0;">
-                 
-           
-           <div class="container footer" style="width:100%;">
-                        
-                    
-              <div class="row footer-block1">
-                 <div class="col-xs-12 col-sm-2 col-sm-offset-1">
-                       <h4 style="text-align:left">网站导航</h4>
-                       <div class="footer-menu" style="position:relative; background-image:none;">
-                       <div class="footer-grayLine"></div>
-                       <div class="footer-greenLine"></div>
-                          <ul>
-                            <li><a href="https://www.xxx.cn/">平台介绍</a></li>
-                            <li><a href="https://www.xxx.cn/unify.php">功能服务</a></li>
-                            <li><a href="https://www.xxx.cn/partner.php">合作伙伴</a></li>
-                            <li><a href="https://www.xxx.cn/jobs.php">人才招聘</a></li>
-                          </ul>
-                       </div>
+</div>
 
-                 </div>
 
-          <div class="clearfix visible-xs"></div>
-              <div class="col-xs-12 col-sm-5">
-              <div style=" height:auto;" class="connectBox">
-              <h4 style="text-align:left">联系方式</h4>
-                       <div class="footer-connect" style="position:relative; background-image:none;">
-                       <div class="footer-grayLine longLine"></div>
-                       <div class="footer-greenLine"></div>
-                        
-                       </div>
+
+<div class="site-wrapper secondBlock" id="secondBlock" style=" height:auto;">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="inner cover">
+                <div style="width:100%; height:auto; margin:auto;">
+                    <div class="container" id="thirdPic" style="opacity: -3.8375; padding-left: 15px; padding-right: 15px;">
+                        <div class="inner cover">
+                            <img class="img-responsive" src="./static/infos.png" style="margin:auto; min-width:300px;">
+                        </div>
+                        <div style=" color:#00bfac; font-size:36px; top:-530px;position:relative">
+                            应用即云
+                        </div>
+                        <div style="width:509px; font-size:36px;text-align:center; word-spacing:15px; top:-350px;margin:auto;position:relative; padding-top:5px; letter-spacing:3px; color:#FFFFFF">
+                            云由应用组成
+                        </div>
+                        <div style="width:100%; height:15px;">
+                        </div>
+                        <div class="introduce" style="top:-330px;margin:auto;position:relative;width:530px; color:#a9aaac; font-style:italic; height:auto; font-family:&#39;Microsoft YaHei UI&#39;;  letter-spacing:1px;  margin:auto; font-size:19px; line-height:30px; text">
+                            YunT（云梯）平台把应用容器化，提供应用弹性部署、负载均衡、发布的平台，无须关心云基础设施
+                        </div>
+                    </div>
                 </div>
-               </div>
-               
-               
-               
-                <div class="col-xs-12 col-sm-2">
-                       <h4 style="text-align:left">关注我们</h4>
-                       <div class="footer-focus" style="position:relative">
-                       <div class="footer-grayLine" style="width:120px;"></div>
-                       <div class="footer-greenLine"></div>
-                         
-                          <div id="ercode" class="ercode" style="display:none;">
-                              
-                          </div>
-                       </div>
-                 </div>  
-        </div> 
-         
-       
-        <div class="row footer-block2">
-                 <div class="col-xs-12 col-sm-2 col-sm-offset-1 footer-company">
-                       <h5 style="color:#65666B; font-size:12px; text-align:left">@2015 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xxx有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备xxxxxxx号-1</h5>
-                 </div>
-       </div>      
-                        
-                        
-           </div>
+            </div>
         </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="site-wrapper" style="height:auto">
+    <div class="site-wrapper-inner">
+        <div class="cover-container" id="fourPic" style="opacity: -3.99167; margin-bottom: 211.5px;">
+            <div class="inner cover">
+                <div style="width:100%; height:380px; margin:auto;">
+                    <div class="functionDetail" style="height:150px; margin:auto">
+                        <div class="row" style="padding-left:0px; padding-right:0px;padding-left:0px; padding-right:0px;">
+
+                            <div class="col-md-4" style="padding-left:0px; padding-right:0px;">
+                                <div class="detail left">
+                                    <div class="index-blockIcon" style=" margin-left:auto; margin-right:auto;background-image:url(images/cloud.png); width:88px; height:88px;">
+                                    </div>
+                                    <div style=" font-size:20px;">
+                                        基于成熟云服务商
+                                    </div>
+                                    <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
+                                        YunT只做应用容器管控，云端应用依然运行在阿里云、百度云和腾讯云服务器上，也有海外服务器满足某些海外网络访问的需求。
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4" style="padding-left:0px; padding-right:0px;">
+                                <div class="detail" style=" margin-left:auto; margin-right:auto">
+                                    <div class="index-blockIcon" style="margin-left:auto; margin-right:auto; background-image:url(images/function.png); width:88px; height:88px;">
+                                    </div>
+                                    <div style=" font-size:20px;">
+                                        以业务的应用为单元
+                                    </div>
+                                    <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
+                                        用户的业务可以由数据库、web、中间等多个“应用”组成，开发部署业务场景时只需关心业务的应用本身，无须关心计算、存储、网络资源(YunT帮用户做硬件资源的弹性管理)。
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 " style="padding-left:0px; padding-right:0px;">
+                                <div class="detail" style=" float:right">
+                                    <div class="index-blockIcon" style="margin-left:auto; margin-right:auto; background-image:url(images/data.png); width:88px; height:88px;">
+                                    </div>
+                                    <div style=" font-size:20px;">
+                                        低价
+                                    </div>
+                                    <div style="margin-top:16px; height:auto;color:#aaaaaa; font-size:14px; line-height:26px; width:100%; padding-left:10px;padding-right:10px;">
+                                        通过对资源的精细的管理，减少了传统虚拟机和操作系统资源的开销，YunT 的运行费用更低更合理。由于后端使用业内主流运营商服务器，YunT能提供相同品质下价格更优惠的云服务。
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                </div>
+            </div>
+
         </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="container site-wrapper index-container2" style=" width:100%; margin:auto;height:auto;background-color:#f8f8f8">
+    <div class="index-bigtitle">
+        成你之美，我之追求
+    </div>
+    <div class="row" style=" margin-left:auto; margin-right:auto; margin-top:60px;padding-left:0px; padding-right:0px;">
+        <div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
+
+            <div class="detail">
+                <div class="index-detail-icon" style="background-image:url(images/1.1.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    使用便捷
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    应用一键部署，自开发应用一键上传，大量公共应用能满足基本需求
+                </div>
+
+
+
+            </div>
+
+
         </div>
-  
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
-    <script src="./static/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--script src="js/ie10-viewport-bug-workaround.js"></script>
-   <script src="js/jquery-1.8.3.min.js"></script>
-   <script src="js/jquery.easing.1.3.js"></script>
-   <script src="js/jquery.scrollify.min.js"></script-->
-   
- <script language="javascript">
+        <div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
+
+
+            <div class="detail margin-center">
+                <div class="index-detail-icon" style="background-image:url(images/1.2.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    专注业务
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    无需搭建和管理底层基础服务
+                </div>
 
 
 
- var fourPicOffsetTop = document.getElementById("fourPic").offsetTop; //190
- 
- ///alert(fourPicOffsetTop);
-if(screenWidth>1200)
-{
- 
-  document.getElementById("fourPic").style.marginBottom = (screenHeight/2)-190+"px";
-}
-  
- 
-
- window.onscroll=function(){
-       
-     var h =0;//+200;
-    if (document.documentElement && document.documentElement.scrollTop) {
-	  
-       h =document.documentElement.scrollTop;
-	  
-     } else if (document.body){
-       h = document.body.scrollTop;;
-	 }
-	 
-     if(h>5)
-	 {
-		document.getElementById("smallAngleLi2").style.backgroundImage="url(images/smallangle.png)";// = "";
-		document.getElementById("smallAngleLi").style.backgroundImage="url(images/smallangle.png)";// = "";
-        document.getElementById("masthead").style.backgroundColor = "#292931";
-	  }	
-     else
-	 {
-	   
-		document.getElementById("smallAngleLi2").style.backgroundImage="url(images/smallangle2.png)";// = "";
-		document.getElementById("smallAngleLi").style.backgroundImage="url(images/smallangle2.png)";// = "";
-	    document.getElementById("masthead").style.backgroundColor = "";
-		/// alert(document.getElementById("smallAngleLi").style.backgroundImage);
-		
-	  }
-
-	 if(screenWidth<1200)
-	 {
-	    document.getElementById("secondPic").style.opacity = 1;
-	    document.getElementById("thirdPic").style.opacity = 1;
-	    document.getElementById("fourPic").style.opacity = 1; 
-	    return;
-	  
-	 }
-	 
-	 
-	 // 1:210 2：475   3：500   4:350
-	 
-	// return;
-	 
-	 var maxNum = (screenHeight -210);
-	 var start = 0;
-	 var end = 400;
-	 
-	 var picH1 = 475;//第一张图片的高度
-	 var picH2 = 460;//第二章图片的高度
-	 var picH3 = 500;//第三章图片的高度
-	 var picH4 = 360;//第四章图片的高度
-	 
-	 var dist1 = 200;
-	 var dist2 = 50;
-	 var dist3 = 50;
-	 
-	
-	 
-	 
-	 
-	 alpha = (end-h)/(end - start);
-	 document.getElementById("firstPic").style.opacity = alpha;
-	  
-	 
-	 if(h<=(picH1/2+dist1+picH2/2))
-	{//渐渐出现
-	  
-	   start = 100;//(screenHeight-475);
-	   end = picH1/2+dist1; //在屏幕正中间
-	   alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
-	   document.getElementById("secondPic").style.opacity = alpha;
-	}else if(h>(picH1/2+dist1+picH2/2))
-	{///渐渐隐藏
-	  
-	   start = picH1/2+dist1+100;
-	   end = start+300;
-	   alpha = (end-h)/(end - start);
-	  ///alpha = (1800 - h)/700; 
-	  document.getElementById("secondPic").style.opacity = alpha;
-	  
-	  
-	}
-	
-	
-	
-	if(h<=(picH1/2+dist1+picH2+dist2+picH3/2))
-	{
-	   start = picH1/2+dist1+picH2/2+100   ;//475/2+200+200 +500/2-100;//(screenHeight-475);
-	   end = picH1/2+dist1+picH2/2+dist2+picH3/2; //在屏幕正中间
-	   alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
-	   
-	   
-	   document.getElementById("thirdPic").style.opacity = alpha;
-	   //document.getElementById('print').innerHTML = h+" px " +"start : "+start+" alpha:"+alpha;
-	   
-	}else if(h>(picH1/2+dist1+picH2+dist2+picH3/2+100))
-	{
-	   start = picH1/2+dist1+picH2/2+dist2+picH3/2+100;
-	   end = start+400;
-	   alpha = (end-h)/(end - start);
-	   document.getElementById("thirdPic").style.opacity = alpha;
-	}
-	 
-	
-	if(h<=(picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+100))
-	{
-	   start =picH1/2+dist1+picH2+dist2+picH3/2;//(screenHeight-475);
-	   end = picH1/2+dist1+picH2+dist2+picH3+dist3; //在屏幕正中间
-	   alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
-	   document.getElementById("fourPic").style.opacity = alpha;
-	   ///document.getElementById('print').innerHTML = h+" px " +"end : "+end+" alpha:"+alpha;
-	   
-	}else if(h>(picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+100))
-	{
-	   start = picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+50;
-	   end = start+300;
-	   alpha = (end-h)/(end - start);
-	   document.getElementById("fourPic").style.opacity = alpha;
-	}
-	//if(fourPicOffsetTop<1000)
-	 fourPicOffsetTop = picH1+dist1+picH2+dist2+picH3+dist3+screenHeight/2-picH1/2-50
-	//alert(picH1+dist1+picH2+dist2+picH3+dist3+screenHeight/2-picH1/2-50);
-	if(h>=fourPicOffsetTop+190-screenHeight/2)
-	{//最后一屏滚动
-	    
-		document.body.style.backgroundAttachment = "scroll";
-	    var hhh = offset+(fourPicOffsetTop+190-screenHeight/2);//(h-fourPicOffsetTop+190+screenHeight/2);
-		document.body.style.backgroundPosition = "0px "+hhh+"px";
-		///alert(hhh);//document.body.style.backgroundPosition);
-		
-		
-	}else
-	{
-	   document.body.style.backgroundAttachment = "fixed";
-	  /// var hei = h+offset;
-	  /// document.body.style.backgroundAttachment = "scroll";
-	   document.body.style.backgroundPosition = "0px "+offset+"px";
-	}
-	 // var hhh = offset-h+h;
-	 
-	// alert(offset);
-	 
-	 //document.body.style.backgroundPosition = "0px "+hhh+"px";
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 return;////////////////////////////////
-     
-	 var maxNum = (screenHeight -480);
-	 var start = 0;
-	 var end = 0;
-     
-	 var alpha = (maxNum - h)/480; //
-	 document.getElementById("firstPic").style.opacity = alpha;
-	
-	
-	
-	
-	if(h<=screenHeight)
-	{//渐渐出现
-	  
-	   start = (screenHeight-650);
-	   end = screenHeight;
-	   
-	   alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
-	   document.getElementById("secondPic").style.opacity = alpha;
-	}else
-	{///渐渐隐藏
-	  
-	   start = screenHeight;
-	   end = (screenHeight+650);
-	   alpha = (end-h)/(end - start);
-	  ///alpha = (1800 - h)/700; 
-	  document.getElementById("secondPic").style.opacity = alpha;
-	}
-	/// document.getElementById('print').innerHTML = h+" px " +alpha;
-	if(h<screenHeight*2)
-	{
-	   start = (2*screenHeight-621);
-	   end   = 2*screenHeight;
-	   alpha = (h-start)/(end - start);
-	   document.getElementById("thirdPic").style.opacity = alpha;
-	  
-	}else
-	{
-	  ///alpha = (2800 - h)/600; 
-	  
-	  start = (2*screenHeight);
-	  end   = 2*screenHeight+621;
-	  alpha = (end-h)/(end - start);
-	  document.getElementById("thirdPic").style.opacity = alpha;
-	}
-	if(h<screenHeight*3)
-	{
-	   start = (3*screenHeight-450);
-	   end   = 3*screenHeight;
-	   alpha = (h-start)/(end - start);
-	   document.getElementById("fourPic").style.opacity = alpha;
-	}else
-	{
-	   start = (3*screenHeight);
-	   end   = 3*screenHeight+450;
-	   alpha = (end-h)/(end - start);
-	   document.getElementById("fourPic").style.opacity = alpha; 
-	 }  
-	
-	 if(h>=2*screenHeight)
-	 {
-	    //background-attachment:fixed;
-		//alert("aas");
-		///document.body.style.backgroundAttachment = "scroll";
-	 }
-	 
-}
+            </div>
 
 
- 
+        </div>
 
- 
+        <div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
 
 
- </script>
- 
-   <div class="moblie" onclick="showMoblieMenu()" style="position:fixed; width:40px; height:40px; top:20px; left:20px; z-index:109; cursor:pointer; background-color:#000000;opacity:0.3;">
-   </div>
-   <div class="moblie" onclick="showMoblieMenu()" style="position:fixed; width:40px; height:40px; top:20px; left:20px; z-index:110; cursor:pointer;">
-       <img id="mobileOpenBtn" style=" width:100%; height:100%;" src="./static/btn.png">     
-       <img id="mobileCloseBtn" style=" width:100%; height:100%; display:none" src="./static/close.png">
-  </div>
-  
-  <div id="mobileBg" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:90; display:none;">
-     <img style="width:100%; height:100%;" src="./static/back.png">
-  </div>
-  <div id="mobileBg2" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:90; display:none; background-color:#000000; opacity:0.6;">
-  </div>
-  
- 
- <div id="mobileMenuBox" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:100; display:none">
-      <ul style=" list-style:none; height:auto; padding-left:60px; padding-top:80px;">
+            <div class="detail margin-center">
+                <div class="index-detail-icon" style="background-image:url(images/1.2.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    副本负载
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    业务流量高峰期时应用可以一键扩容多个副本，均匀对外提供服务
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="row index-second-block" style="margin-left:auto; margin-right:auto;padding-left:0px; padding-right:0px;">
+        <div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
+
+            <div class="detail">
+                <div class="index-detail-icon" style=" background-image:url(images/1.4.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    按量付费
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    业务消耗的硬件和软件资源按量计费，减少浪费
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-xs-12 col-sm-4" style="padding-left:0px; padding-right:0px;">
+
+
+            <div class="detail margin-center">
+                <div class="index-detail-icon" style="background-image:url(images/1.5.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    应用管理
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    本地开发的应用可以一键上传到YunT并部署，支持应用仓库方便管理。支持公共应用仓库。
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-xs-12 col-sm-4 pc" style="padding-left:0px; padding-right:0px;">
+
+            <div class="detail margin-center">
+                <div class="index-detail-icon" style="background-image:url(images/1.6.png);">
+                </div>
+                <div style=" font-size:20px; color:#000000">
+                    安全保障
+                </div>
+                <div class="detail" style="margin-top:10px; height:auto;color:#999999; font-size:14px;">
+                    多路容灾数据盘，支持异地多活(对业务应用需要小的改动)
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="container" style="font-size:24px; width:100%; color:#000000; background-color:#00b1a0;">
+
+
+    <div class="container index-block4">
+        <p class="kouhao1">我们致力于
+        </p>
+        <p class="kouhao2">打造低价可靠的云计算平台，让用户更多地关注业务！
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="site-wrapper" style="background-color:#24242e; height:320px">
+    <div class="site-wrapper-inner">
+        <div class="cover-container" style="font-size:24px; color:#f0f0f0;">
+
+
+            <div class="container footer" style="width:100%;">
+
+
+                <div class="row footer-block1">
+                    <div class="col-xs-12 col-sm-2 col-sm-offset-1">
+                        <h4 style="text-align:left">网站导航</h4>
+                        <div class="footer-menu" style="position:relative; background-image:none;">
+                            <div class="footer-grayLine"></div>
+                            <div class="footer-greenLine"></div>
+                            <ul>
+                                <li><a href="https://www.xxx.cn/">平台介绍</a></li>
+                                <li><a href="https://www.xxx.cn/unify.php">功能服务</a></li>
+                                <li><a href="https://www.xxx.cn/partner.php">合作伙伴</a></li>
+                                <li><a href="https://www.xxx.cn/jobs.php">人才招聘</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="clearfix visible-xs"></div>
+                    <div class="col-xs-12 col-sm-5">
+                        <div style=" height:auto;" class="connectBox">
+                            <h4 style="text-align:left">联系方式</h4>
+                            <div class="footer-connect" style="position:relative; background-image:none;">
+                                <div class="footer-grayLine longLine"></div>
+                                <div class="footer-greenLine"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-sm-2">
+                        <h4 style="text-align:left">关注我们</h4>
+                        <div class="footer-focus" style="position:relative">
+                            <div class="footer-grayLine" style="width:120px;"></div>
+                            <div class="footer-greenLine"></div>
+
+                            <div id="ercode" class="ercode" style="display:none;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row footer-block2">
+                    <div class="col-xs-12 col-sm-2 col-sm-offset-1 footer-company">
+                        <h5 style="color:#65666B; font-size:12px; text-align:left">@2015 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xxx有限公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备xxxxxxx号-1</h5>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script-->
+<script src="./static/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--script src="js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.scrollify.min.js"></script-->
+
+<script language="javascript">
+
+
+
+    var fourPicOffsetTop = document.getElementById("fourPic").offsetTop; //190
+
+    ///alert(fourPicOffsetTop);
+    if(screenWidth>1200)
+    {
+
+        document.getElementById("fourPic").style.marginBottom = (screenHeight/2)-190+"px";
+    }
+
+
+
+    window.onscroll=function(){
+
+        var h =0;//+200;
+        if (document.documentElement && document.documentElement.scrollTop) {
+
+            h =document.documentElement.scrollTop;
+
+        } else if (document.body){
+            h = document.body.scrollTop;;
+        }
+
+        if(h>5)
+        {
+            //document.getElementById("smallAngleLi2").style.backgroundImage="url(images/smallangle.png)";// = "";
+            //document.getElementById("smallAngleLi").style.backgroundImage="url(images/smallangle.png)";// = "";
+            document.getElementById("masthead").style.backgroundColor = "#292931";
+        }
+        else
+        {
+
+            //document.getElementById("smallAngleLi2").style.backgroundImage="url(images/smallangle2.png)";// = "";
+            //document.getElementById("smallAngleLi").style.backgroundImage="url(images/smallangle2.png)";// = "";
+            document.getElementById("masthead").style.backgroundColor = "";
+            /// alert(document.getElementById("smallAngleLi").style.backgroundImage);
+
+        }
+
+        if(screenWidth<1200)
+        {
+            document.getElementById("secondPic").style.opacity = 1;
+            document.getElementById("thirdPic").style.opacity = 1;
+            document.getElementById("fourPic").style.opacity = 1;
+            return;
+
+        }
+
+
+        // 1:210 2：475   3：500   4:350
+
+        // return;
+
+        var maxNum = (screenHeight -210);
+        var start = 0;
+        var end = 400;
+
+        var picH1 = 475;//第一张图片的高度
+        var picH2 = 460;//第二章图片的高度
+        var picH3 = 500;//第三章图片的高度
+        var picH4 = 360;//第四章图片的高度
+
+        var dist1 = 200;
+        var dist2 = 50;
+        var dist3 = 50;
+
+
+
+
+
+        alpha = (end-h)/(end - start);
+        document.getElementById("firstPic").style.opacity = alpha;
+
+
+        if(h<=(picH1/2+dist1+picH2/2))
+        {//渐渐出现
+
+            start = 100;//(screenHeight-475);
+            end = picH1/2+dist1; //在屏幕正中间
+            alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
+            document.getElementById("secondPic").style.opacity = alpha;
+        }else if(h>(picH1/2+dist1+picH2/2))
+        {///渐渐隐藏
+
+            start = picH1/2+dist1+100;
+            end = start+300;
+            alpha = (end-h)/(end - start);
+            ///alpha = (1800 - h)/700;
+            document.getElementById("secondPic").style.opacity = alpha;
+
+
+        }
+
+
+
+        if(h<=(picH1/2+dist1+picH2+dist2+picH3/2))
+        {
+            start = picH1/2+dist1+picH2/2+100   ;//475/2+200+200 +500/2-100;//(screenHeight-475);
+            end = picH1/2+dist1+picH2/2+dist2+picH3/2; //在屏幕正中间
+            alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
+
+
+            document.getElementById("thirdPic").style.opacity = alpha;
+            //document.getElementById('print').innerHTML = h+" px " +"start : "+start+" alpha:"+alpha;
+
+        }else if(h>(picH1/2+dist1+picH2+dist2+picH3/2+100))
+        {
+            start = picH1/2+dist1+picH2/2+dist2+picH3/2+100;
+            end = start+400;
+            alpha = (end-h)/(end - start);
+            document.getElementById("thirdPic").style.opacity = alpha;
+        }
+
+
+        if(h<=(picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+100))
+        {
+            start =picH1/2+dist1+picH2+dist2+picH3/2;//(screenHeight-475);
+            end = picH1/2+dist1+picH2+dist2+picH3+dist3; //在屏幕正中间
+            alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
+            document.getElementById("fourPic").style.opacity = alpha;
+            ///document.getElementById('print').innerHTML = h+" px " +"end : "+end+" alpha:"+alpha;
+
+        }else if(h>(picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+100))
+        {
+            start = picH1/2+dist1+picH2+dist2+picH3+dist3+picH4/2+50;
+            end = start+300;
+            alpha = (end-h)/(end - start);
+            document.getElementById("fourPic").style.opacity = alpha;
+        }
+        //if(fourPicOffsetTop<1000)
+        fourPicOffsetTop = picH1+dist1+picH2+dist2+picH3+dist3+screenHeight/2-picH1/2-50
+        //alert(picH1+dist1+picH2+dist2+picH3+dist3+screenHeight/2-picH1/2-50);
+        if(h>=fourPicOffsetTop+190-screenHeight/2)
+        {//最后一屏滚动
+
+            document.body.style.backgroundAttachment = "scroll";
+            var hhh = offset+(fourPicOffsetTop+190-screenHeight/2);//(h-fourPicOffsetTop+190+screenHeight/2);
+            document.body.style.backgroundPosition = "0px "+hhh+"px";
+            ///alert(hhh);//document.body.style.backgroundPosition);
+
+
+        }else
+        {
+            document.body.style.backgroundAttachment = "fixed";
+            /// var hei = h+offset;
+            /// document.body.style.backgroundAttachment = "scroll";
+            document.body.style.backgroundPosition = "0px "+offset+"px";
+        }
+        // var hhh = offset-h+h;
+
+        // alert(offset);
+
+        //document.body.style.backgroundPosition = "0px "+hhh+"px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        return;////////////////////////////////
+
+        var maxNum = (screenHeight -480);
+        var start = 0;
+        var end = 0;
+
+        var alpha = (maxNum - h)/480; //
+        document.getElementById("firstPic").style.opacity = alpha;
+
+
+
+
+        if(h<=screenHeight)
+        {//渐渐出现
+
+            start = (screenHeight-650);
+            end = screenHeight;
+
+            alpha = (h-start)/(end - start);//;(h-(screenHeight-650)/2)/650;
+            document.getElementById("secondPic").style.opacity = alpha;
+        }else
+        {///渐渐隐藏
+
+            start = screenHeight;
+            end = (screenHeight+650);
+            alpha = (end-h)/(end - start);
+            ///alpha = (1800 - h)/700;
+            document.getElementById("secondPic").style.opacity = alpha;
+        }
+        /// document.getElementById('print').innerHTML = h+" px " +alpha;
+        if(h<screenHeight*2)
+        {
+            start = (2*screenHeight-621);
+            end   = 2*screenHeight;
+            alpha = (h-start)/(end - start);
+            document.getElementById("thirdPic").style.opacity = alpha;
+
+        }else
+        {
+            ///alpha = (2800 - h)/600;
+
+            start = (2*screenHeight);
+            end   = 2*screenHeight+621;
+            alpha = (end-h)/(end - start);
+            document.getElementById("thirdPic").style.opacity = alpha;
+        }
+        if(h<screenHeight*3)
+        {
+            start = (3*screenHeight-450);
+            end   = 3*screenHeight;
+            alpha = (h-start)/(end - start);
+            document.getElementById("fourPic").style.opacity = alpha;
+        }else
+        {
+            start = (3*screenHeight);
+            end   = 3*screenHeight+450;
+            alpha = (end-h)/(end - start);
+            document.getElementById("fourPic").style.opacity = alpha;
+        }
+
+        if(h>=2*screenHeight)
+        {
+            //background-attachment:fixed;
+            //alert("aas");
+            ///document.body.style.backgroundAttachment = "scroll";
+        }
+
+    }
+
+
+
+
+
+
+
+</script>
+
+<div class="moblie" onclick="showMoblieMenu()" style="position:fixed; width:40px; height:40px; top:20px; left:20px; z-index:109; cursor:pointer; background-color:#000000;opacity:0.3;">
+</div>
+<div class="moblie" onclick="showMoblieMenu()" style="position:fixed; width:40px; height:40px; top:20px; left:20px; z-index:110; cursor:pointer;">
+    <img id="mobileOpenBtn" style=" width:100%; height:100%;" src="./static/btn.png">
+    <img id="mobileCloseBtn" style=" width:100%; height:100%; display:none" src="./static/close.png">
+</div>
+
+<div id="mobileBg" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:90; display:none;">
+    <img style="width:100%; height:100%;" src="./images/back.png">
+</div>
+<div id="mobileBg2" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:90; display:none; background-color:#000000; opacity:0.6;">
+</div>
+
+
+<div id="mobileMenuBox" style="position:fixed;width:100%;  height:100%; top:0; left:0; z-index:100; display:none">
+    <ul style=" list-style:none; height:auto; padding-left:60px; padding-top:80px;">
         <!--li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
           <a style="color:#ffffff; font-size:20px;" href="/">
             首页
           </a>
         </li-->
         <li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
-          <a style="color:#00bfac; font-size:16px;" href="https://www.xxx.cn/">
-            平台介绍
-          </a>
+            <a style="color:#00bfac; font-size:16px;" href="https://www.xxx.cn/">
+                平台介绍
+            </a>
         </li>
-         <li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
-          <a style="color:#ffffff; font-size:16px;" href="https://www.xxx.cn/unify.php">
-            云端服务一体化开发引擎
-          </a>
+        <li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
+            <a style="color:#ffffff; font-size:16px;" href="https://www.xxx.cn/help/index.html">
+                功能介绍
+            </a>
         </li>
-       <li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
-          <a style="color:#ffffff; font-size:16px;" href="https://www.xxx.cn/service.php">
-            IoT功能组件及方案超市
-          </a>
-        </li>
-       <li style=" width:100%; height:auto; padding-bottom:20px; text-align:left">
-          <a style="color:#ffffff; font-size:16px;" href="https://www.xxx.cn/engine.php">
-            大数据分析引擎
-          </a>
-        </li>  
-        
-        <li style=" width:100%; height:auto; padding-bottom:40px; text-align:left">
-          <a style="color:#ffffff; font-size:16px;" href="https://www.xxx.cn/partner.php">
-            合作伙伴
-          </a>
-        </li>
-        <li style=" width:100%; height:auto; text-align:left">
-          <div class="Apply" style="margin-top:20px;">
-                <a class="circleAngle" href="https://www.xxx.cn/apply.php">
-                  申请试用
-                </a>
-             
-             </div>
-        </li>
-        
-      </ul>
-  </div>
- 
- 
- 
-    
-  
+
+    </ul>
+</div>
+
+
+
+
+
 
 </body></html>
