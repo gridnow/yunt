@@ -48,17 +48,20 @@ body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvet
             <ul class="nav">
 
               <li class="">
-                <a href="index.html">帮助首页</a>
+                <a href="index.html">首页</a>
               </li>
+              <!--
               <li class="">
                 <a href="usage.html">使用介绍</a>
               </li>
               <li class="">
                 <a href="examples.html">应用案例</a>
               </li>
+              
               <li class="">
                 <a href="advanced.html">高级说明</a>
               </li>
+              -->
 			  
             </ul>
           </div>
@@ -85,6 +88,7 @@ body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvet
         <ul class="nav nav-list bs-docs-sidenav">
 			<li><a href="#whatisit"><i class="icon-chevron-right"></i>YunT是什么</a></li>
 			<li><a href="#whatcanitdo"><i class="icon-chevron-right"></i>YunT能做什么</a></li>
+      <li><a href="#safty"><i class="icon-chevron-right"></i>YunT安全特性</a></li>
 			<li><a href="#example"><i class="icon-chevron-right"></i>YunT使用案例</a></li>
 			<li><a href="#fees"><i class="icon-chevron-right"></i>YunT计价策略</a></li>
 			<li><a href="#faq"><i class="icon-chevron-right"></i>常见问题</a></li>
@@ -135,11 +139,28 @@ body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvet
           
         </section>
 		
+        <!-- safty
+        ================================================== -->
+        <section id="safty">
+          <div class="page-header">
+            <h1>安全特性</h1>
+          </div>
+          <p class="lead">容器隔离技术，提高业务安全性</p>
+            <h3>1，没有虚拟机，没有远程登陆</h3>
+        <p>用户应用被隔离在容器中运行，没有虚拟机，没有root权限，没有远程登录攻击的可能。</p>
+            <h3>2，异地多活</h3>
+        <p>无状态业务可以实现多路同时运行，对外YunT暴露一个服务IP：端口，对内YunT把流量轮流导入到每路业务。一路崩溃不影响全局业务，且整个过程对用户／开发者透明。</p>
+            <h3>3，双路数据存储</h3>
+              <p>用户业务数据在YunT 平台上默认是双路存储，单点故障不会导致数据丢失。</p>
+          <h3>4，可控公网访问</h3>
+              <p>为了安全，用户需要指定应用是否被公网访问，从而减少因为不注意的公网暴露到来的风险。</p>
+        </section>
+
         <!-- example
         ================================================== -->
         <section id="example">
           <div class="page-header">
-            <h1>YunT使用案例</h1>
+            <h1>使用案例</h1>
           </div>
           <p class="lead">部署基于Nginx的站点</p>
           	<h3>Step1，找到Nginx应用</h3>
@@ -149,14 +170,14 @@ body{font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvet
             <h3>Step3，启动</h3>
 	            <p>管控中心->应用部署，填写应用名称为mynginx, 副本填写为1（更多的副本能帮助站点负载均衡），上传刚才压缩的资源包。最后点击“提交部署”按钮。</p>
 			<h3>Step4，允许公网访问</h3>
-	            <p>YunT 为了安全，用户需要指定用户是否被公网访问。点击管控中心->服务部署，填写服务的名称为mynginx-public-service,在“已部署的应用”的列表中选择mynginx,“端口”中填写80，勾选“公网服务”，点击“提交部署”即可。在管控中心->概览中的“已部署的服务”列表中能看到公网IP和对应端口，浏览器可直接访问。</p>
+	            <p>YunT 为了安全，用户需要指定应用是否被公网访问。点击管控中心->服务部署，填写服务的名称为mynginx-public-service,在“已部署的应用”的列表中选择mynginx,“端口”中填写80，勾选“公网服务”，点击“提交部署”即可。在管控中心->概览中的“已部署的服务”列表中能看到公网IP和对应端口，浏览器可直接访问。</p>
         </section>
 
         <!-- YunT 收费标准
         ================================================== -->
         <section id="fees">
           <div class="page-header">
-            <h1>YunT 计费策略</h1>
+            <h1>计费策略</h1>
           </div>
           <p class="lead">YunT 按照“网络，数据盘，内存容量，应用数量”四个维度分别计费，可动调整按需调整数量，按量付费。 YunT把操作系统和其他资源的开销从用户的业务中分离，让用户应用需要更少的资源。</p>
           	<h3>网络</h3>
